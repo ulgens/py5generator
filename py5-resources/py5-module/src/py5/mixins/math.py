@@ -331,7 +331,7 @@ class MathMixin:
     def random_choice(self, seq: Sequence[Any]) -> Any:
         """$class_Sketch_random_choice"""
         if len(seq):
-            return seq[self._rng.integers(0, len(seq))]
+            return self._rng.choice(seq)
         else:
             return None
 
